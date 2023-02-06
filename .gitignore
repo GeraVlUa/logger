@@ -1,5 +1,7 @@
 # phpstorm project files
 .idea
+runtime
+storage
 
 # netbeans project files
 nbproject
