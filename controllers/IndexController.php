@@ -73,7 +73,7 @@ class IndexController extends BaseController
     private function info(array $data = []): void
     {
         /** @var Logger $logger */
-        $logger = Yii::$app->log->getLogger();
+        $logger = Yii::$app->getLog()->getLogger();
 
         $logger->log($data);
         $logger->logEmail($data);

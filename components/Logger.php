@@ -95,7 +95,7 @@ class Logger extends BaseLogger implements LoggerInterface
      */
     public function log($message, $level = self::LEVEL_INFO, $category = 'develop'): void
     {
-        $this->send([$message, $level, $category, microtime()]);
+        $this->send([$message, $level, $category, microtime(true)]);
     }
 
     /**
@@ -106,7 +106,7 @@ class Logger extends BaseLogger implements LoggerInterface
      */
     public function logEmail($message, $level = self::LEVEL_INFO, $category = 'develop'): void
     {
-        $this->sendByType([$message, $level, $category, microtime()], self::TYPE_EMAIL);
+        $this->sendByType([$message, $level, $category, microtime(true)], self::TYPE_EMAIL);
     }
 
     /**
@@ -117,6 +117,6 @@ class Logger extends BaseLogger implements LoggerInterface
      */
     public function logDB($message, $level = self::LEVEL_INFO, $category = 'develop'): void
     {
-        $this->sendByType([$message, $level, $category, microtime()], self::TYPE_DB);
+        $this->sendByType([$message, $level, $category, microtime(true)], self::TYPE_DB);
     }
 }
